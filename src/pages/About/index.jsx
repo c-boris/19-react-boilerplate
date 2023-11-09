@@ -15,7 +15,7 @@ const stats = [
 
 export default function About() {
   return (
-    <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <section id="about" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
       <img
         src={Background}
         alt="Background image"
@@ -71,6 +71,6 @@ export default function About() {
           </dl>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

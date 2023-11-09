@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 export default function Footer() {
   return (
-    <div className="bg-white">
+    <section id="footer" className="bg-white">
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -33,6 +33,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
