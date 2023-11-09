@@ -16,7 +16,7 @@ export default function Footer() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 flex flex-col items-center justify-center">
+        <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-28 flex flex-col items-center justify-center">
           <div className="flex items-center justify-center flex-col gap-y-4">
             <div className="flex items-center justify-center gap-x-6">
               <a href="#" className="text-gray-700 hover:text-indigo-600">
@@ -29,7 +29,7 @@ export default function Footer() {
                 <FaInstagram className="h-6 w-6" />
               </a>
             </div>
-            <p className="text-gray-700">© 2023 Your Company, Inc. All rights reserved.</p>
+            <p className="text-gray-700">© 2023 Your Company | All rights reserved.</p>
           </div>
         </div>
       </div>
