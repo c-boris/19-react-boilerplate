@@ -1,21 +1,19 @@
+import { Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Logo from "./pages/Logo";
-import Blog from "./pages/Blog";
-import Contact from "./pages/Contact";
-import Footer from "./pages/Footer";
-import './App.css'
+import Login from "./pages/Login";
+import Footer from "./components/Footer";
+
+// import './App.css'
 
 function App() {
   return (
     <>
       <Header/>
-      <Home />
-      <About />
-      <Logo/>
-      <Blog/>
-      <Contact/>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+     </Routes>
       <Footer/>
     </>
   );

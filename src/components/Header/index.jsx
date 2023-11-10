@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FaEject } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -17,7 +18,7 @@ const Header = () => {
     <header className="bg-gray-50 fixed inset-x-0 top-0 z-50">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+        <NavLink to="/" className="-m-1.5 p-1.5" >
             <span className="sr-only">Your Company</span>
             <FaEject className='w-8 h-8 cursor-pointer text-indigo-600 hover:text-gray-700' />
             {/* <img
@@ -25,7 +26,7 @@ const Header = () => {
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                 alt=""
               /> */}
-          </a>
+          </NavLink>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -45,9 +46,12 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+        <NavLink
+            to="/login"
+            className="text-sm font-semibold leading-6 text-gray-900"
+          >
+            Log in
+          </NavLink>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
@@ -86,12 +90,12 @@ const Header = () => {
                 ))}
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
-                >
-                  Log in
-                </a>
+              <NavLink
+                to="/login"
+                className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
+              >
+                Log in
+              </NavLink>
               </div>
             </div>
           </div>
