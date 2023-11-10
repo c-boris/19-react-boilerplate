@@ -2,13 +2,12 @@ import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FaEject } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
 
 const navigation = [
   { name: 'Product', href: '#' },
   { name: 'Features', href: '#' },
   { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 const Header = () => {
@@ -17,17 +16,13 @@ const Header = () => {
   return (
     <header className="bg-gray-50 fixed inset-x-0 top-0 z-50">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1">
-        <NavLink to="/" className="-m-1.5 p-1.5" >
-            <span className="sr-only">Your Company</span>
-            <FaEject className='w-8 h-8 cursor-pointer text-indigo-600 hover:text-gray-700' />
-            {/* <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              /> */}
-          </NavLink>
-        </div>
+      <div className="flex lg:flex-1">
+      <a href='/' className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <FaEject className='w-6 h-6 cursor-pointer text-indigo-600 hover:text-gray-700' />
+            </a>
+          </div>
+        
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -46,21 +41,18 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <NavLink
-            to="/login"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Log in
-          </NavLink>
+        <a href='/login' className="text-sm font-semibold leading-6 text-gray-900">
+              Log in
+            </a>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
         <div className="fixed inset-0 z-50" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a href='/' className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <FaEject className='w-8 h-8 cursor-pointer text-indigo-600 hover:text-gray-700' />
+              <FaEject className='w-6 h-6 cursor-pointer text-indigo-600 hover:text-gray-700' />
               {/* <img
                 className="h-8 w-auto"
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -90,12 +82,12 @@ const Header = () => {
                 ))}
               </div>
               <div className="py-6">
-              <NavLink
-                to="/login"
-                className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
-              >
-                Log in
-              </NavLink>
+              <a
+                    href='/login'
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Log in
+                  </a>
               </div>
             </div>
           </div>
