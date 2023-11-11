@@ -2,7 +2,7 @@ import Hero from "../../components/Hero";
 import About from "../../components/About";
 import Logo from "../../components/Logo";
 import Blog from "../../components/Blog";
-import ContactForm from "../../components/ContactForm";
+import Team from "../../components/Team";
 
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       <About/>
       <Logo/>
       <Blog/>
-      <ContactForm/>
+      <Team/>
     </div>
   )
 }

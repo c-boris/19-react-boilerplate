@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Layout from './Layout.jsx'
 import Home from "./pages/Home";
+import Product from "./pages/Product";
+import Features from "./pages/Features";
+import Marketplace from "./pages/Marketplace";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import ErrorPage from "./pages/Error/";
@@ -19,13 +22,25 @@ const router = createBrowserRouter([
         element: <Home/>
       },
       {
-        path: "login",
-        element: <Login/>
+        path: "product",
+        element: <Product/>
+      },
+      {
+        path: "features",
+        element: <Features/>
+      },
+      {
+        path: "marketplace",
+        element: <Marketplace/>
       },
       {
         path: "contact",
         element: <Contact/>
-      }
+      },
+      {
+        path: "login",
+        element: <Login/>
+      },
     ]
   },
 ]);
