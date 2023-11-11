@@ -2,13 +2,13 @@ import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FaEject } from 'react-icons/fa';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Product', to: '/product' },
+  { name: 'Features', to: '/contact' },
+  { name: 'Marketplace', to: '/contact' },
+  { name: 'Contact', to: '/contact' },
 ];
 
 const Header = () => {
@@ -17,13 +17,12 @@ const Header = () => {
   return (
     <header className="bg-gray-50 fixed inset-x-0 top-0 z-50">
       <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-      <div className="flex lg:flex-1">
-      <a href='/' className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <FaEject className='w-6 h-6 cursor-pointer text-indigo-600 hover:text-gray-700' />
-            </a>
-          </div>
-        
+        <div className="flex lg:flex-1">
+          <NavLink to='/' className="-m-1.5 p-1.5">
+            <span className="sr-only">Your Company</span>
+            <FaEject className='w-6 h-6 cursor-pointer text-indigo-600 hover:text-gray-700' />
+          </NavLink>
+        </div>
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -36,15 +35,15 @@ const Header = () => {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
-            <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+            <NavLink key={item.name} to={item.to} className="text-sm font-semibold leading-6 text-gray-900">
               {item.name}
-            </a>
+            </NavLink>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <NavLink to="/login" className="text-sm font-semibold leading-6 text-gray-900">
-          Log in
-        </NavLink>
+          <NavLink to="/login" className="text-sm font-semibold leading-6 text-gray-900">
+            Log in
+          </NavLink>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
@@ -54,11 +53,6 @@ const Header = () => {
             <a href='/' className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <FaEject className='w-6 h-6 cursor-pointer text-indigo-600 hover:text-gray-700' />
-              {/* <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              /> */}
             </a>
             <button
               type="button"
@@ -73,22 +67,22 @@ const Header = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
+                    to={item.to}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200"
                   >
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </div>
               <div className="py-6">
-              <a
-                    href='/login'
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
+                <a
+                  href='/login'
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Log in
+                </a>
               </div>
             </div>
           </div>
