@@ -3,6 +3,7 @@ import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FaEject } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import LightToggle from "../../components/LightToggle/"
 
 const navigation = [
   { name: 'Product', to: '/product' },
@@ -34,6 +35,7 @@ const Header = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
+        
           {navigation.map((item) => (
             <NavLink key={item.name} to={item.to} className="text-sm font-semibold leading-6 text-gray-900">
               {item.name}
@@ -41,9 +43,11 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          
           <NavLink to="/login" className="text-sm font-semibold leading-6 text-gray-900">
             Log in
           </NavLink>
+          <LightToggle />
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
