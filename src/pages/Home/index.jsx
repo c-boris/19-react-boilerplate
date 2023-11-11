@@ -4,6 +4,7 @@ import Logo from "../../components/Logo";
 import Blog from "../../components/Blog";
 import ContactForm from "../../components/ContactForm";
 
+
 export default function Home() {
 
   return (
