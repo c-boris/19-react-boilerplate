@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { FaEject } from 'react-icons/fa';
+import {NavLink} from 'react-router-dom'
 
 const navigation = [
   { name: 'Product', href: '#' },
@@ -41,9 +42,9 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href='/login' className="text-sm font-semibold leading-6 text-gray-900">
-              Log in
-            </a>
+        <NavLink to="/login" className="text-sm font-semibold leading-6 text-gray-900">
+          Log in
+        </NavLink>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)}>
