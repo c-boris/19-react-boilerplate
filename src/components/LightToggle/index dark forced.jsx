@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 
 function LightToggle() {
-  const [isDarkTheme, setIsDarkTheme] = useState(() => {
-    const prefersDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const savedTheme = localStorage.getItem("themePreference");
-    return savedTheme === "dark" || (savedTheme === null && prefersDarkMode);
-  });
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   useEffect(() => {
     const root = document.documentElement;
