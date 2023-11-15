@@ -21,7 +21,7 @@ const Header = () => {
         <div className="flex lg:flex-1">
           <NavLink to='/' className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <FaEject className='w-6 h-6  text-indigo-600 hover:text-gray-700' />
+            <FaEject className='w-6 h-6  text-accent hover:text-gray-700' />
           </NavLink>
         </div>
         <div className="flex lg:hidden">
@@ -58,7 +58,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <NavLink to='/' className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <FaEject className='w-6 h-6  text-indigo-600 hover:text-gray-700' onClick={() => setMobileMenuOpen(false)}/>
+              <FaEject className='w-6 h-6  text-accent hover:text-gray-700' onClick={() => setMobileMenuOpen(false)}/>
             </NavLink>
             <button
               type="button"

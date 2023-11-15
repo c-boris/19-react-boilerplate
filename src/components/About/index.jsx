@@ -15,7 +15,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <section id="about" className="relative isolate overflow-hidden bg-dark py-24 sm:py-32">
       <img
         src={Background}
         alt="Background image"
@@ -47,14 +47,14 @@ export default function About() {
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <h2 className="text-4xl font-bold tracking-tight text-dprimary sm:text-6xl">Work with us</h2>
+          <p className="mt-6 text-lg leading-8 text-dsecondary">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
             fugiat veniam occaecat fugiat aliqua.
           </p>
         </div>
         <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-dprimary sm:grid-cols-2 md:flex lg:gap-x-10">
             {links.map((link) => (
               <a key={link.name} href={link.href}>
                 {link.name} <span aria-hidden="true">&rarr;</span>
@@ -64,8 +64,8 @@ export default function About() {
           <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse">
-                <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>
-                <dd className="text-2xl font-bold leading-9 tracking-tight text-white">{stat.value}</dd>
+                <dt className="text-base leading-7 text-dsecondary">{stat.name}</dt>
+                <dd className="text-2xl font-bold leading-9 tracking-tight text-dprimary">{stat.value}</dd>
               </div>
             ))}
           </dl>
