@@ -13,7 +13,7 @@ module.exports = {
         secondary: "#4b5563",
         dark: "#111827",
         dprimary: "#f9fafb",
-        dsecondary: "#d1d5db",
+        dsecondary: "#9ca3af",
         accent: "#6366f1",
       },
     },
